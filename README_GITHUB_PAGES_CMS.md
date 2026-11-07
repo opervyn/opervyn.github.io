@@ -50,3 +50,11 @@ For free GitHub Pages hosting, the repository generally needs to be public. Trea
 ## Validation status
 
 The page generator, JSON and admin JavaScript are syntax-checked in this package. Deployment to the user's GitHub repository has not been performed. The first upload and GitHub Actions run are still required before the CMS is live. GitHub Pages rebuilds after each CMS commit.
+
+
+## November 2026 repair notes
+
+- This package is configured for the GitHub user-site repository `opervyn/opervyn.github.io` and the root URL `https://opervyn.github.io/`.
+- The homepage has one valid HTML doctype, cache-busted stylesheet URLs, and loads `site.js` so CMS homepage settings are applied.
+- `.nojekyll` is included and the GitHub Actions workflow checks that required root files exist before publishing.
+- Upload the extracted package contents to the repository root, replacing matching files and folders. Do not upload the ZIP itself or place everything inside an extra folder.
