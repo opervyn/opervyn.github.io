@@ -1,8 +1,7 @@
 (() => {
-  const repo = 'opervyn-website';
-  const base = location.hostname === 'opervyn.github.io' ? `/${repo}/` : '/';
+  const base = '/';
   const fullUrl = `${location.origin}${base}`;
-  // GitHub Pages project sites live below /<repo>/; normalize source-root links and assets.
+  // OPERVYN uses the GitHub Pages user-site root: https://opervyn.github.io/
   document.querySelectorAll('[href^="/"]').forEach(el => {
     const value = el.getAttribute('href');
     if (value && !value.startsWith('//') && !value.startsWith(base)) el.setAttribute('href', base + value.replace(/^\/+/, ''));

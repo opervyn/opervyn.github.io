@@ -1,6 +1,6 @@
 # OPERVYN — GitHub Pages Full Page CMS (৳0 hosting)
 
-This package is prepared for `https://github.com/opervyn/opervyn-website`. It keeps the existing OPERVYN CSS theme and fonts (Inter + Montserrat), and adds a GitHub-backed visual CMS for page content.
+This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing OPERVYN CSS theme and fonts (Inter + Montserrat), and adds a GitHub-backed visual CMS for page content.
 
 ## What the CMS manages
 
@@ -23,18 +23,18 @@ For free GitHub Pages hosting, the repository generally needs to be public. Trea
 
 ## One-time setup
 
-1. Confirm the repository is `opervyn/opervyn-website` and its default branch is `main`.
+1. Confirm the repository is `opervyn/opervyn.github.io` and its default branch is `main`.
 2. Extract this ZIP and upload **the contents of the extracted folder** to the repository root, replacing old files when GitHub asks. Do not upload the outer ZIP as one file.
 3. In GitHub, open **Settings → Pages** and choose **GitHub Actions** as the source.
 4. Open **Actions** and wait for `Deploy OPERVYN to GitHub Pages` to complete successfully.
-5. Website: `https://opervyn.github.io/opervyn-website/`  
-   CMS: `https://opervyn.github.io/opervyn-website/admin/`
+5. Website: `https://opervyn.github.io/`  
+   CMS: `https://opervyn.github.io/admin/`
 
 ## Create a GitHub token
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.
 2. Resource owner: `opervyn`.
-3. Repository access: **Only select repositories** → `opervyn-website`.
+3. Repository access: **Only select repositories** → `opervyn.github.io`.
 4. Repository permissions: **Contents: Read and write**. Metadata remains read-only.
 5. Use an expiry date. Paste the token into the CMS and connect. Never send it to anyone or put it in a website file.
 6. Disconnect after editing; closing the CMS page also clears the in-memory token.
