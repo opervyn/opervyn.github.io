@@ -170,34 +170,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "test-cms",
-      "title": "TEST CMS",
-      "slug": "test-cms",
-      "status": "draft",
-      "seo": {
-        "title": "TEST CMS",
-        "description": ""
-      },
-      "sections": [
-        {
-          "id": "hero-1794088293354",
-          "type": "hero",
-          "eyebrow": "OPERVYN",
-          "heading": "AI-BUILD FULLY CMS",
-          "body": "YOUR OFFSHORE OPERATIONS PARTNER"
-        },
-        {
-          "id": "section-1794088429630",
-          "type": "image",
-          "heading": "New section",
-          "body": "",
-          "items": [],
-          "members": []
-        }
-      ],
-      "navLabel": ""
     }
   ]
 }
