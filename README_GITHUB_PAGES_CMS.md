@@ -1,6 +1,6 @@
 # OPERVYN — GitHub Pages Full Page CMS (৳0 hosting)..
 
-This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing OPERVYN CSS theme and fonts (Inter + Montserrat), and adds a GitHub-backed visual CMS for page content.
+This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing OPERVYN CSS theme and fonts (DM Sans + Inter + Manrope + Montserrat), and adds a GitHub-backed visual CMS for page content.
 
 ## What the CMS manages
 
@@ -35,7 +35,7 @@ For free GitHub Pages hosting, the repository generally needs to be public. Trea
 1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.
 2. Resource owner: `opervyn`.
 3. Repository access: **Only select repositories** → `opervyn.github.io`.
-4. Repository permissions: **Contents: Read and write**. Metadata remains read-only.
+4. Repository permissions: **Contents: Read and write**. Add **Actions: Read-only** to let the CMS report the build/deployment outcome. Metadata remains read-only.
 5. Use an expiry date. Paste the token into the CMS and connect. Never send it to anyone or put it in a website file.
 6. Disconnect after editing; closing the CMS page also clears the in-memory token.
 
@@ -49,12 +49,20 @@ For free GitHub Pages hosting, the repository generally needs to be public. Trea
 
 ## Validation status
 
-The page generator, JSON and admin JavaScript are syntax-checked in this package. Deployment to the user's GitHub repository has not been performed. The first upload and GitHub Actions run are still required before the CMS is live. GitHub Pages rebuilds after each CMS commit.
+The page generator, JSON, and admin JavaScript are validated in this package. Deployment to the GitHub repository still requires the repository owner to upload/commit these files and allow the Actions workflow to run. The CMS reports the content commit separately from the Pages deployment when the token includes Actions: Read-only.
 
 
 ## November 2026 repair notes
 
 - This package is configured for the GitHub user-site repository `opervyn/opervyn.github.io` and the root URL `https://opervyn.github.io/`.
 - The homepage has one valid HTML doctype, cache-busted stylesheet URLs, and loads `site.js` so CMS homepage settings are applied.
-- `.nojekyll` is included and the GitHub Actions workflow checks that required root files exist before publishing.
+- `.nojekyll` and `.github/workflows/pages.yml` are included. The workflow builds the CMS pages, validates critical root files and JSON, uploads the complete repository root as the Pages artifact, and deploys it.
 - Upload the extracted package contents to the repository root, replacing matching files and folders. Do not upload the ZIP itself or place everything inside an extra folder.
+
+
+## Deployment repair included in this package
+
+- The Pages workflow publishes the repository root (`.`), so `styles.css`, `theme-redesign.css`, `content/site.json`, assets, and `/admin/` are included in the same artifact as `index.html`.
+- The build script tracks only generated page files in `.cms-generated-files.json`; it no longer recursively deletes page folders or unrelated assets.
+- The sitemap is regenerated without duplicate routes, and custom pages cannot overwrite an unmanaged page at the same path.
+- The CMS uses consistent site-settings field IDs and can verify the Actions run for a content commit when its token has Actions read access.
