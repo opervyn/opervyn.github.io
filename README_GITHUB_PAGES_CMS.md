@@ -1,4 +1,4 @@
-# OPERVYN — GitHub Pages Full Page CMS (৳0 hosting).
+# OPERVYN — GitHub Pages Full Page CMS (৳0 hosting)..
 
 This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing OPERVYN CSS theme and fonts (Inter + Montserrat), and adds a GitHub-backed visual CMS for page content.
 
