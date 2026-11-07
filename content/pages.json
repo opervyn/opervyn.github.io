@@ -1,0 +1,175 @@
+{
+  "pages": [
+    {
+      "id": "about",
+      "title": "About OPERVYN",
+      "slug": "about",
+      "status": "published",
+      "seo": {
+        "title": "About OPERVYN | Your Offshore Operations Partner",
+        "description": "Learn about OPERVYN, a remote data entry and virtual assistant support company based in Sylhet, Bangladesh."
+      },
+      "sections": [
+        {
+          "id": "about-intro",
+          "type": "hero",
+          "eyebrow": "ABOUT OPERVYN",
+          "heading": "A dedicated team. Operations made easier.",
+          "body": "OPERVYN is a remote-first operations support company based in Sylhet, Bangladesh. We provide people, build dedicated teams and coordinate day-to-day delivery for clients who need dependable support with recurring data-entry and administrative tasks."
+        },
+        {
+          "id": "about-model",
+          "type": "text",
+          "heading": "How our operating model works",
+          "body": "Each assignment follows the client's instructions, systems and agreed workflow. A dedicated agent or team handles the work, while an OPERVYN supervisor monitors coordination, progress and quality. Your business remains in control of its processes."
+        },
+        {
+          "id": "founders",
+          "type": "founders",
+          "heading": "Built by People. Driven by Purpose.",
+          "body": "OPERVYN is built by a team committed to dependable remote operations support.",
+          "members": [
+            {
+              "name": "Sobrul Karim",
+              "role": "Founding Member",
+              "image": "assets/13008.jpg",
+              "alt": "Sobrul Karim, OPERVYN founding member"
+            },
+            {
+              "name": "Rudro Singh",
+              "role": "Founding Member",
+              "image": "assets/13009.jpg",
+              "alt": "Rudro Singh, OPERVYN founding member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-entry",
+      "title": "Data Entry Services",
+      "slug": "data-entry",
+      "status": "published",
+      "seo": {
+        "title": "Remote Data Entry Services | OPERVYN",
+        "description": "Structured data entry, PDF and image to spreadsheet conversion, product information entry and quality checks."
+      },
+      "sections": [
+        {
+          "id": "de-hero",
+          "type": "hero",
+          "eyebrow": "OPERVYN SERVICE / 01",
+          "heading": "Reliable data entry, organized around your workflow.",
+          "body": "OPERVYN provides remote data entry support for businesses that need information captured, organized, updated or transferred into structured formats. Our agents follow your templates, source materials, instructions and agreed quality requirements."
+        },
+        {
+          "id": "de-tasks",
+          "type": "list",
+          "heading": "Data entry tasks we can discuss",
+          "items": [
+            {
+              "title": "Spreadsheet data entry",
+              "body": "Enter, organize, update and format information in Microsoft Excel or Google Sheets using your field structure and templates."
+            },
+            {
+              "title": "PDF, image and document to spreadsheet",
+              "body": "Transfer readable information from supplied PDFs, scanned documents, photographs, menus and other source files into structured spreadsheets."
+            },
+            {
+              "title": "Product information and description entry",
+              "body": "Prepare product names, model details, materials, features, measurements, patterns, categories and descriptions using client-provided references and guidelines."
+            },
+            {
+              "title": "Data review and quality checks",
+              "body": "Review entries for completeness, formatting consistency and alignment with source information or client checklists."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "virtual-assistant",
+      "title": "Virtual Assistant Services",
+      "slug": "virtual-assistant",
+      "status": "published",
+      "seo": {
+        "title": "Virtual Assistant Services | OPERVYN",
+        "description": "Flexible task-based virtual assistant support for administration, inbox tasks, research and routine business operations."
+      },
+      "sections": [
+        {
+          "id": "va-hero",
+          "type": "hero",
+          "eyebrow": "OPERVYN SERVICE / 02",
+          "heading": "Practical virtual assistant support for everyday business tasks.",
+          "body": "OPERVYN provides task-based remote assistance for businesses that need help with routine administrative and operational activities. You define the tasks, tools, priorities and procedures; the assigned agent follows the agreed workflow."
+        },
+        {
+          "id": "va-tasks",
+          "type": "list",
+          "heading": "Virtual assistant tasks we can discuss",
+          "items": [
+            {
+              "title": "Administrative assistance",
+              "body": "Organizing information, maintaining records, preparing documents and following established procedures."
+            },
+            {
+              "title": "Email and inbox support",
+              "body": "Organizing inboxes, sorting messages, preparing draft responses or flagging items according to client-defined rules."
+            },
+            {
+              "title": "Internet research and data collection",
+              "body": "Gathering information from specified sources and preparing structured summaries or spreadsheets."
+            },
+            {
+              "title": "Document and file management",
+              "body": "Organizing digital documents, updating records and maintaining agreed naming conventions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nda",
+      "title": "NDA & Confidentiality",
+      "slug": "nda-confidentiality",
+      "status": "published",
+      "seo": {
+        "title": "NDA & Confidentiality | OPERVYN",
+        "description": "Learn about OPERVYN's approach to client confidentiality, agreed access and non-disclosure arrangements."
+      },
+      "sections": [
+        {
+          "id": "nda-hero",
+          "type": "hero",
+          "eyebrow": "CLIENT TRUST & CONFIDENTIALITY",
+          "heading": "Your business information deserves careful handling.",
+          "body": "OPERVYN understands that data entry and virtual assistant work may involve access to internal business information. We are prepared to review and sign a mutually agreed Non-Disclosure Agreement (NDA) before confidential project information is shared or access is granted, subject to authorized approval."
+        },
+        {
+          "id": "nda-practices",
+          "type": "list",
+          "heading": "Our confidentiality approach",
+          "items": [
+            {
+              "title": "Mutually agreed NDA",
+              "body": "The document, parties, permitted purpose, duration, exclusions and other terms are reviewed and agreed before signature."
+            },
+            {
+              "title": "Access based on project responsibilities",
+              "body": "The client and OPERVYN discuss which personnel need access, which systems or files are involved and what actions are permitted."
+            },
+            {
+              "title": "Client instructions for information handling",
+              "body": "File-sharing methods, storage locations, communication channels, retention periods and deletion requirements are agreed during onboarding."
+            },
+            {
+              "title": "No public use without permission",
+              "body": "Client-provided confidential material and business records are not intentionally used in public marketing without prior permission."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://opervyn.github.io/opervyn-website/sitemap.xml
