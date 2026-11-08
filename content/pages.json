@@ -18,12 +18,6 @@
           "body": "OPERVYN is a remote-first operations support company based in Sylhet, Bangladesh. We provide people, build dedicated teams and coordinate day-to-day delivery for clients who need dependable support with recurring data-entry and administrative tasks."
         },
         {
-          "id": "about-model",
-          "type": "text",
-          "heading": "How our operating model works",
-          "body": "Each assignment follows the client's instructions, systems and agreed workflow. A dedicated agent or team handles the work, while an OPERVYN supervisor monitors coordination, progress and quality. Your business remains in control of its processes."
-        },
-        {
           "id": "founders",
           "type": "founders",
           "heading": "Built by People. Driven by Purpose.",
@@ -40,10 +34,23 @@
               "role": "Founding Member",
               "image": "assets/13009.jpg",
               "alt": "Rudro Singh, OPERVYN founding member"
+            },
+            {
+              "name": "Fazle Rabbi",
+              "role": "Founding Member",
+              "image": "assets/cms-1794099600767-13036.jpg",
+              "alt": "Fazle Rabbi, OPERVYN founding member"
             }
           ]
+        },
+        {
+          "id": "about-model",
+          "type": "text",
+          "heading": "How our operating model works",
+          "body": "Each assignment follows the client's instructions, systems and agreed workflow. A dedicated agent or team handles the work, while an OPERVYN supervisor monitors coordination, progress and quality. Your business remains in control of its processes."
         }
-      ]
+      ],
+      "navLabel": ""
     },
     {
       "id": "data-entry",
