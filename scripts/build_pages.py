@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build CMS-managed OPERVYN pages without deleting unrelated site content."""
+"""Build CMS-managed ABLEHARBOR pages without deleting unrelated site content."""
 
 from __future__ import annotations
 
@@ -77,13 +77,13 @@ def asset_url(value: object, base: str) -> str:
 
 
 def safe_link(value: object) -> str:
-    raw = str(value or "mailto:opervyn.business@gmail.com").strip()
+    raw = str(value or "mailto:ABLEHARBOR.BUSINESS@GMAIL.COM").strip()
     parsed = urlsplit(raw)
     if parsed.scheme and parsed.scheme.lower() not in {"http", "https", "mailto", "tel"}:
-        return "mailto:opervyn.business@gmail.com"
+        return "mailto:ABLEHARBOR.BUSINESS@GMAIL.COM"
     if raw.startswith("//"):
-        return "mailto:opervyn.business@gmail.com"
-    return raw or "mailto:opervyn.business@gmail.com"
+        return "mailto:ABLEHARBOR.BUSINESS@GMAIL.COM"
+    return raw or "mailto:ABLEHARBOR.BUSINESS@GMAIL.COM"
 
 
 def render_section(section: dict, base: str) -> str:
@@ -99,7 +99,7 @@ def render_section(section: dict, base: str) -> str:
     if section_type == "hero":
         return (
             '<section class="seo-hero"><div class="eyebrow">'
-            f'<span class="eyebrow-line"></span>{esc(section.get("eyebrow") or "OPERVYN")}'
+            f'<span class="eyebrow-line"></span>{esc(section.get("eyebrow") or "ABLEHARBOR")}'
             f'</div><h1>{esc(section.get("heading"))}</h1>{body}</section>'
         )
 
@@ -139,7 +139,7 @@ def render_section(section: dict, base: str) -> str:
         return (
             f'<section class="onboarding-panel">{eyebrow}{heading}{body}'
             f'<a class="btn btn-primary" href="{esc(safe_link(section.get("buttonUrl")))}">'
-            f'{esc(section.get("buttonText") or "Contact OPERVYN")} ↗</a></section>'
+            f'{esc(section.get("buttonText") or "Contact ABLEHARBOR")} ↗</a></section>'
         )
 
     return f'<section class="seo-content-main">{eyebrow}{heading}{body}</section>'
@@ -205,7 +205,7 @@ def render_page(page: dict, route: str, all_pages: list[dict]) -> str:
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:url" content="{esc(canonical)}">
   <meta property="og:type" content="website">
-  <link rel="icon" href="{base}assets/opervyn-logo-new.png">
+  <link rel="icon" href="{base}assets/ableharbor-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="{fonts}" rel="stylesheet">
@@ -215,15 +215,15 @@ def render_page(page: dict, route: str, all_pages: list[dict]) -> str:
 </head>
 <body>
   <header class="site-header">
-    <a aria-label="OPERVYN home" class="brand" href="{base}">
-      <img alt="OPERVYN — Your Offshore Operations Partner" src="{base}assets/opervyn-logo-new.webp">
+    <a aria-label="ABLEHARBOR home" class="brand" href="{base}">
+      <img alt="ABLEHARBOR — Your Offshore Operations Partner" src="{base}assets/ableharbor-logo.png">
     </a>
     <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav">
       <a href="{base}">Home</a><a href="{base}services/">Our Services</a>{nav_links}
-      <a href="mailto:opervyn.business@gmail.com">Contact</a>
+      <a href="mailto:ABLEHARBOR.BUSINESS@GMAIL.COM">Contact</a>
     </nav>
   </header>
   <main class="cms-page">
@@ -238,16 +238,16 @@ def render_page(page: dict, route: str, all_pages: list[dict]) -> str:
       <a href="{base}nda-confidentiality/">NDA &amp; Confidentiality</a>{nav_links}
     </div>
     <div class="footer-main">
-      <a aria-label="OPERVYN home" class="brand footer-brand" href="{base}">
-        <img alt="OPERVYN — Your Offshore Operations Partner" src="{base}assets/opervyn-logo-new.webp">
+      <a aria-label="ABLEHARBOR home" class="brand footer-brand" href="{base}">
+        <img alt="ABLEHARBOR — Your Offshore Operations Partner" src="{base}assets/ableharbor-logo.png">
       </a>
-      <p>OPERVYN — Your Offshore Operations Partner.</p>
+      <p>ABLEHARBOR — Your Offshore Operations Partner.</p>
     </div>
     <div class="footer-bottom">
       <span>Remote-first operations support from Bangladesh</span>
-      <span>© OPERVYN. All rights reserved.</span>
+      <span>© ABLEHARBOR. All rights reserved.</span>
       <span>Data Entry · Virtual Assistant</span>
-      <span><a href="mailto:opervyn.business@gmail.com">Email ↗</a></span>
+      <span><a href="mailto:ABLEHARBOR.BUSINESS@GMAIL.COM">Email ↗</a></span>
     </div>
   </footer>
   <script src="{base}script.js"></script>

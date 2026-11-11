@@ -1,6 +1,6 @@
-# OPERVYN — GitHub Pages Full Page CMS (৳0 hosting)..
+# ABLEHARBOR — GitHub Pages Full Page CMS (৳0 hosting)..
 
-This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing OPERVYN CSS theme and fonts (DM Sans + Inter + Manrope + Montserrat), and adds a GitHub-backed visual CMS for page content.
+This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing ABLEHARBOR CSS theme and fonts (DM Sans + Inter + Manrope + Montserrat), and adds a GitHub-backed visual CMS for page content.
 
 ## What the CMS manages
 
@@ -11,7 +11,7 @@ This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It 
 - Edit per-page SEO title and meta description.
 - Upload images (PNG/JPG/WebP/GIF, max 5 MB) directly to the repository Assets folder from the CMS.
 - Preview a page before publishing.
-- Every generated page uses the same shared OPERVYN stylesheets, logo, typography and responsive layout. New pages use `/pages/<slug>/`.
+- Every generated page uses the same shared ABLEHARBOR stylesheets, logo, typography and responsive layout. New pages use `/pages/<slug>/`.
 
 The Data Entry, Virtual Assistant, NDA and About pages are generated from `content/pages.json` and replace the corresponding static page routes during the GitHub Actions build. New pages are generated under `/pages/<slug>/`.
 
@@ -26,7 +26,7 @@ For free GitHub Pages hosting, the repository generally needs to be public. Trea
 1. Confirm the repository is `opervyn/opervyn.github.io` and its default branch is `main`.
 2. Extract this ZIP and upload **the contents of the extracted folder** to the repository root, replacing old files when GitHub asks. Do not upload the outer ZIP as one file.
 3. In GitHub, open **Settings → Pages** and choose **GitHub Actions** as the source.
-4. Open **Actions** and wait for `Deploy OPERVYN to GitHub Pages` to complete successfully.
+4. Open **Actions** and wait for `Deploy ABLEHARBOR to GitHub Pages` to complete successfully.
 5. Website: `https://opervyn.github.io/`  
    CMS: `https://opervyn.github.io/admin/`
 

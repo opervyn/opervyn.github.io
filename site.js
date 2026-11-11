@@ -44,7 +44,7 @@
       if (typeof data.contactEmail === 'string' && data.contactEmail.trim()) {
         document.querySelectorAll('[data-cms-email]').forEach(element => {
           element.href = `mailto:${data.contactEmail.trim()}`;
-          // Keep CTA labels (for example, "Email OPERVYN") intact; update address labels only.
+          // Keep CTA labels (for example, "Email ABLEHARBOR") intact; update address labels only.
           if (element.classList.contains('contact-email')) {
             const suffix = element.textContent.trim().endsWith('↗') ? ' ↗' : '';
             element.textContent = `${data.contactEmail.trim()}${suffix}`;
@@ -54,6 +54,6 @@
     })
     .catch(error => {
       // The static HTML remains usable when the optional CMS settings file cannot load.
-      console.warn('OPERVYN site settings were not applied:', error.message);
+      console.warn('ABLEHARBOR site settings were not applied:', error.message);
     });
 })();

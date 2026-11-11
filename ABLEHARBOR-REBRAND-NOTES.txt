@@ -1,0 +1,19 @@
+ABLEHARBOR website rebrand
+==========================
+
+Brand: ABLEHARBOR
+Descriptor: OPERATIONS
+Contact: ABLEHARBOR.BUSINESS@GMAIL.COM
+Primary logo: assets/ableharbor-logo.png
+Favicon/icon: assets/ableharbor-icon.png
+
+The existing GitHub Pages hostname (opervyn.github.io) is intentionally retained
+because it is the current hosting address. It should only be changed after a
+new custom domain is purchased, configured and verified.
+
+The CMS repository target has been updated to:
+mohammadsabbir-hub/mohammadsabbir-hub.github.io
+
+Before publishing, verify that the GitHub fine-grained token used by the CMS
+has Contents read/write access to that repository. Existing site content,
+routes, service pages and CMS structure have been retained.

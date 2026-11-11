@@ -2,44 +2,44 @@
   "pages": [
     {
       "id": "about",
-      "title": "About OPERVYN",
+      "title": "About ABLEHARBOR",
       "slug": "about",
       "status": "published",
       "seo": {
-        "title": "About OPERVYN | Your Offshore Operations Partner",
-        "description": "Learn about OPERVYN, a remote data entry and virtual assistant support company based in Sylhet, Bangladesh."
+        "title": "About ABLEHARBOR | Your Offshore Operations Partner",
+        "description": "Learn about ABLEHARBOR, a remote data entry and virtual assistant support company based in Sylhet, Bangladesh."
       },
       "sections": [
         {
           "id": "about-intro",
           "type": "hero",
-          "eyebrow": "ABOUT OPERVYN",
+          "eyebrow": "ABOUT ABLEHARBOR",
           "heading": "A dedicated team. Operations made easier.",
-          "body": "OPERVYN is a remote-first operations support company based in Sylhet, Bangladesh. We provide people, build dedicated teams and coordinate day-to-day delivery for clients who need dependable support with recurring data-entry and administrative tasks."
+          "body": "ABLEHARBOR is a remote-first operations support company based in Sylhet, Bangladesh. We provide people, build dedicated teams and coordinate day-to-day delivery for clients who need dependable support with recurring data-entry and administrative tasks."
         },
         {
           "id": "founders",
           "type": "founders",
           "heading": "Built by People. Driven by Purpose.",
-          "body": "OPERVYN is built by a team committed to dependable remote operations support.",
+          "body": "ABLEHARBOR is built by a team committed to dependable remote operations support.",
           "members": [
             {
               "name": "Sobrul Karim",
               "role": "Founding Member",
               "image": "assets/13008.jpg",
-              "alt": "Sobrul Karim, OPERVYN founding member"
+              "alt": "Sobrul Karim, ABLEHARBOR founding member"
             },
             {
               "name": "Rudro Singh",
               "role": "Founding Member",
               "image": "assets/13009.jpg",
-              "alt": "Rudro Singh, OPERVYN founding member"
+              "alt": "Rudro Singh, ABLEHARBOR founding member"
             },
             {
               "name": "Fazle Rabbi",
               "role": "Founding Member",
               "image": "assets/cms-1794099600767-13036.jpg",
-              "alt": "Fazle Rabbi, OPERVYN founding member"
+              "alt": "Fazle Rabbi, ABLEHARBOR founding member"
             }
           ]
         },
@@ -47,7 +47,7 @@
           "id": "about-model",
           "type": "text",
           "heading": "How our operating model works",
-          "body": "Each assignment follows the client's instructions, systems and agreed workflow. A dedicated agent or team handles the work, while an OPERVYN supervisor monitors coordination, progress and quality. Your business remains in control of its processes."
+          "body": "Each assignment follows the client's instructions, systems and agreed workflow. A dedicated agent or team handles the work, while an ABLEHARBOR supervisor monitors coordination, progress and quality. Your business remains in control of its processes."
         }
       ],
       "navLabel": ""
@@ -58,16 +58,16 @@
       "slug": "data-entry",
       "status": "published",
       "seo": {
-        "title": "Remote Data Entry Services | OPERVYN",
+        "title": "Remote Data Entry Services | ABLEHARBOR",
         "description": "Structured data entry, PDF and image to spreadsheet conversion, product information entry and quality checks."
       },
       "sections": [
         {
           "id": "de-hero",
           "type": "hero",
-          "eyebrow": "OPERVYN SERVICE / 01",
+          "eyebrow": "ABLEHARBOR SERVICE / 01",
           "heading": "Reliable data entry, organized around your workflow.",
-          "body": "OPERVYN provides remote data entry support for businesses that need information captured, organized, updated or transferred into structured formats. Our agents follow your templates, source materials, instructions and agreed quality requirements."
+          "body": "ABLEHARBOR provides remote data entry support for businesses that need information captured, organized, updated or transferred into structured formats. Our agents follow your templates, source materials, instructions and agreed quality requirements."
         },
         {
           "id": "de-tasks",
@@ -100,16 +100,16 @@
       "slug": "virtual-assistant",
       "status": "published",
       "seo": {
-        "title": "Virtual Assistant Services | OPERVYN",
+        "title": "Virtual Assistant Services | ABLEHARBOR",
         "description": "Flexible task-based virtual assistant support for administration, inbox tasks, research and routine business operations."
       },
       "sections": [
         {
           "id": "va-hero",
           "type": "hero",
-          "eyebrow": "OPERVYN SERVICE / 02",
+          "eyebrow": "ABLEHARBOR SERVICE / 02",
           "heading": "Practical virtual assistant support for everyday business tasks.",
-          "body": "OPERVYN provides task-based remote assistance for businesses that need help with routine administrative and operational activities. You define the tasks, tools, priorities and procedures; the assigned agent follows the agreed workflow."
+          "body": "ABLEHARBOR provides task-based remote assistance for businesses that need help with routine administrative and operational activities. You define the tasks, tools, priorities and procedures; the assigned agent follows the agreed workflow."
         },
         {
           "id": "va-tasks",
@@ -142,8 +142,8 @@
       "slug": "nda-confidentiality",
       "status": "published",
       "seo": {
-        "title": "NDA & Confidentiality | OPERVYN",
-        "description": "Learn about OPERVYN's approach to client confidentiality, agreed access and non-disclosure arrangements."
+        "title": "NDA & Confidentiality | ABLEHARBOR",
+        "description": "Learn about ABLEHARBOR's approach to client confidentiality, agreed access and non-disclosure arrangements."
       },
       "sections": [
         {
@@ -151,7 +151,7 @@
           "type": "hero",
           "eyebrow": "CLIENT TRUST & CONFIDENTIALITY",
           "heading": "Your business information deserves careful handling.",
-          "body": "OPERVYN understands that data entry and virtual assistant work may involve access to internal business information. We are prepared to review and sign a mutually agreed Non-Disclosure Agreement (NDA) before confidential project information is shared or access is granted, subject to authorized approval."
+          "body": "ABLEHARBOR understands that data entry and virtual assistant work may involve access to internal business information. We are prepared to review and sign a mutually agreed Non-Disclosure Agreement (NDA) before confidential project information is shared or access is granted, subject to authorized approval."
         },
         {
           "id": "nda-practices",
@@ -164,7 +164,7 @@
             },
             {
               "title": "Access based on project responsibilities",
-              "body": "The client and OPERVYN discuss which personnel need access, which systems or files are involved and what actions are permitted."
+              "body": "The client and ABLEHARBOR discuss which personnel need access, which systems or files are involved and what actions are permitted."
             },
             {
               "title": "Client instructions for information handling",
