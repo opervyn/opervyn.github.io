@@ -91,3 +91,36 @@ h1 span{color:var(--blue)}
 @media(max-width:820px){.site-header{height:76px;padding:0 5%}.site-header .brand img{width:155px;height:58px}.menu-toggle{display:flex;flex-direction:column;gap:5px;padding:10px}.menu-toggle span{width:22px;height:2px;background:var(--navy);display:block}.nav{display:none;position:absolute;top:75px;left:0;right:0;background:#fff;border:1px solid #e1e9f2;padding:20px 6%;box-shadow:0 15px 35px #071a351a;align-items:stretch;flex-direction:column;gap:14px}.nav.open{display:flex}.nav a{font-size:12px}.nav-cta{text-align:center}.section{padding:76px 6%}.hero{grid-template-columns:1fr;min-height:unset;padding-top:65px;padding-bottom:88px;gap:10px}.hero-content{max-width:650px}.hero-visual{min-height:390px;margin-top:8px}.hero-bottom{left:6%;right:6%;font-size:7px}.intro-grid{gap:35px}.remote-panel{grid-template-columns:1fr;padding:35px 28px}.remote-visual{min-height:230px}.founder-copy{padding:36px 30px}.founder-photo-wrap{min-height:400px}.contact-grid{gap:40px}}
 @media(max-width:600px){.announcement{font-size:7px;letter-spacing:.08em;padding:0 8px;text-align:center}.site-header .brand img{width:138px;height:52px}.hero{padding-top:55px;padding-bottom:80px}h1{font-size:clamp(39px,11vw,52px)}.hero-tagline{font-size:14px}.hero-desc{font-size:12px}.hero-visual{min-height:345px}.main-card{width:88%;padding:19px}.visual-title{font-size:25px}.float-chip{padding:9px 10px}.chip-a{left:-1%;top:9%}.chip-b{right:-1%;bottom:8%}.hero-bottom{gap:8px;font-size:6px;letter-spacing:.07em}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:18px;padding-bottom:18px}.metric{padding:12px 10px;border-right:0;border-bottom:1px solid #e7edf4}.metric:nth-child(odd){border-right:1px solid #e7edf4}.metric:nth-last-child(-n+2){border-bottom:0}.metric strong{font-size:17px}.metric span{font-size:9px}.section-heading{display:block}.section-heading>p{margin-top:18px;max-width:100%}.intro-grid{grid-template-columns:1fr;gap:22px}.intro-grid h2,.section-heading h2{font-size:34px}.service-grid-primary,.service-category-grid,.seo-directory-grid-two{grid-template-columns:1fr}.service-card{padding:23px}.process-line-five{grid-template-columns:1fr}.process-line-five article{padding:18px}.capacity-strip{gap:8px}.capacity-strip>div{padding:11px}.capacity-strip strong{font-size:23px}.remote-panel{padding:29px 21px}.remote-copy h2{font-size:34px}.founder-card{grid-template-columns:1fr}.founder-photo-wrap{min-height:420px;max-height:540px}.founder-copy{padding:29px 23px}.founder-quote{font-size:14px}.contact-form{padding:23px}.footer-bottom{display:grid;gap:8px}.footer-brand img{width:155px;height:60px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Visual CMS sections inherit ABLEHARBOR's existing brand tokens and spacing. */
+.cms-added-section{position:relative;background:#fff;border:1px solid #e7edf4;border-radius:18px;margin:28px max(calc((100vw - 1160px)/2),6%);padding:clamp(24px,4vw,48px);box-shadow:0 12px 34px #0b1f4408}
+.cms-added-section h2{font:800 clamp(27px,3vw,38px)/1.2 Manrope,sans-serif;color:var(--navy);letter-spacing:-.045em;margin:14px 0}
+.cms-added-intro{max-width:820px;color:#718098;font-size:14px;line-height:1.85}
+.cms-added-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:24px}
+.cms-added-card,.cms-added-stat{padding:22px;border:1px solid #e2eaf4;border-radius:13px;background:#f9fbfe}
+.cms-added-card h3{font:800 16px Manrope,sans-serif;color:var(--navy);margin:10px 0}
+.cms-added-card p,.cms-added-card li{font-size:12px;line-height:1.8;color:#718098}
+.cms-added-card ul{padding-left:18px}
+.cms-added-card-image{width:100%;max-height:220px;object-fit:cover;border-radius:9px}
+.cms-added-feature-image{display:block;width:min(100%,760px);height:auto;border-radius:14px;margin:22px 0}
+.cms-added-icon{font-size:24px;color:var(--blue)}
+.cms-added-faq{max-width:850px;margin:22px auto 0;border-top:1px solid #e2eaf4}
+.cms-added-faq details{padding:18px 2px;border-bottom:1px solid #e2eaf4}
+.cms-added-faq summary{font:700 14px Manrope,sans-serif;color:var(--navy)}
+.cms-added-faq p{font-size:12px;line-height:1.8;color:#718098;margin:12px 0 0}
+.cms-added-gallery-item{margin:0}.cms-added-gallery-item img{width:100%;height:210px;object-fit:cover;border-radius:10px}.cms-added-gallery-item figcaption{font-size:12px;color:#718098;margin-top:8px}
+.cms-added-stat strong{display:block;font:800 30px Manrope;color:var(--blue)}.cms-added-stat span{font-size:12px;color:#718098}
+.cms-added-logo img{max-width:150px;max-height:75px;object-fit:contain}.cms-added-logo span{display:block;font-size:12px;color:#52627b}
+.cms-added-grid-team .cms-added-member{text-align:center}.cms-added-grid-team .cms-added-card-image{height:240px;object-position:center 25%}
+.cms-added-cta{background:#f5f9ff}
+@media(max-width:700px){.cms-added-section{margin:20px 5%;padding:22px}.cms-added-grid{grid-template-columns:1fr}.cms-added-grid-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.seo-footer-links{display:flex;flex-wrap:wrap;gap:18px;padding:0 0 20px;margin:0 0 24px;border-bottom:1px solid #ffffff20}
+.seo-footer-links a{font-size:11px;font-weight:700;color:#c5d8ef}.seo-footer-links a:hover{color:#fff}
+.footer-heading{font:800 16px Manrope,sans-serif;color:#fff;margin:0 0 8px}
+.nav .cms-nav-dropdown{position:relative;font-size:12px;font-weight:700;color:#45536b}
+.nav .cms-nav-dropdown>summary{display:block;font:inherit;color:inherit;cursor:pointer;padding:8px 0}
+.nav .cms-nav-dropdown>summary::marker{content:""}
+.nav .cms-nav-submenu{position:absolute;top:100%;left:0;min-width:210px;display:grid;gap:0;padding:8px;background:#fff;border:1px solid #e7edf4;border-radius:10px;box-shadow:0 14px 35px #0b1f4418;z-index:30}
+.nav .cms-nav-submenu a{padding:10px 12px;border-radius:6px;font-size:11px}.nav .cms-nav-submenu a:hover{background:#f2f7ff;color:var(--blue)}
+@media(max-width:700px){.nav .cms-nav-dropdown{width:100%}.nav .cms-nav-submenu{position:static;box-shadow:none;margin-top:7px;min-width:0}}
+.nav .cms-nav-dropdown>summary>a{color:inherit;font:inherit}.nav .cms-nav-dropdown>summary>a:hover{color:var(--blue)}

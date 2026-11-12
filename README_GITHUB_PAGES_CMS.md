@@ -1,79 +1,97 @@
-# ABLEHARBOR — GitHub Pages Full Page CMS (৳0 hosting)..
+# ABLEHARBOR CMS — GitHub Pages
 
-This package is prepared for `https://github.com/opervyn/opervyn.github.io`. It keeps the existing ABLEHARBOR CSS theme and fonts (DM Sans + Inter + Manrope + Montserrat), and adds a GitHub-backed visual CMS for page content.
+The CMS runs in the browser and stores content in this repository. GitHub Actions generates CMS-managed routes and deploys the static website to GitHub Pages.
 
-## What the CMS manages
+- Public site: `https://ableharbor.github.io/`
+- Repository: `ableharbor/ableharbor.github.io`
+- Publishing branch: `main`
+- Admin: `https://ableharbor.github.io/admin/`
 
-- Homepage copy and SEO fields in `content/site.json`.
-- Existing About, Data Entry, Virtual Assistant and NDA page content through the page editor.
-- Create new pages, edit page titles/slugs, save drafts or publish, and delete pages.
-- Add, edit, remove and reorder page sections: hero, text, image, list, cards, call-to-action and founding-member profiles.
-- Edit per-page SEO title and meta description.
-- Upload images (PNG/JPG/WebP/GIF, max 5 MB) directly to the repository Assets folder from the CMS.
-- Preview a page before publishing.
-- Every generated page uses the same shared ABLEHARBOR stylesheets, logo, typography and responsive layout. New pages use `/pages/<slug>/`.
+## Content architecture
 
-The Data Entry, Virtual Assistant, NDA and About pages are generated from `content/pages.json` and replace the corresponding static page routes during the GitHub Actions build. New pages are generated under `/pages/<slug>/`.
+- `content/pages.json` contains every managed page, its SEO settings, visibility, ordered sections, section fields and repeatable items.
+- `content/site.json` contains shared contact details, navigation, footer content and media alt-text metadata.
+- `index.html` and `services/index.html` remain the original bespoke ABLEHARBOR layouts. They are now represented by the `home` and `services` system-page records in `content/pages.json`. The site script hydrates those existing sections from the CMS without replacing their design.
+- `scripts/build_pages.py` generates the About, Data Entry, Virtual Assistant, NDA and custom CMS routes. It also updates legacy-page SEO metadata, hidden-section state and the sitemap.
+- `.github/workflows/pages.yml` builds and deploys the repository root to GitHub Pages.
 
-## Important architecture and security
+## Connect the CMS
 
-GitHub Pages is static hosting. It cannot run a traditional server-side CMS, private backend sessions or a private database. This CMS is a browser-based editor that reads and writes JSON/files through the GitHub API. Anyone can open `/admin/`; only a person with a valid repository-scoped GitHub token can publish. The token is held in memory only, not local storage and not committed. This is not server-side authentication.
+1. Open `https://ableharbor.github.io/admin/`.
+2. Create a fine-grained GitHub personal access token.
+3. Set resource owner to `ableharbor` and repository access to `ableharbor.github.io` only.
+4. Grant **Contents: Read and write**. Add **Actions: Read-only** if you want deployment status shown in the dashboard.
+5. Paste the token into the CMS and connect.
 
-For free GitHub Pages hosting, the repository generally needs to be public. Treat every committed file as public. Never put client data, confidential files, passwords or tokens in the repository.
+The token is held in browser memory only. It is not stored in local storage or committed to the repository. Disconnect when finished. GitHub Pages is static hosting: the admin route is not a private server-side login and repository contents are public. Do not store confidential client information or secrets in the repository.
 
-## One-time setup
+## Manage pages
 
-1. Confirm the repository is `opervyn/opervyn.github.io` and its default branch is `main`.
-2. Extract this ZIP and upload **the contents of the extracted folder** to the repository root, replacing old files when GitHub asks. Do not upload the outer ZIP as one file.
-3. In GitHub, open **Settings → Pages** and choose **GitHub Actions** as the source.
-4. Open **Actions** and wait for `Deploy ABLEHARBOR to GitHub Pages` to complete successfully.
-5. Website: `https://opervyn.github.io/`  
-   CMS: `https://opervyn.github.io/admin/`
+- **Homepage:** Pages → Homepage. Edit its SEO and the existing sections without changing the original visual design.
+- **Services overview:** Pages → Our Services. Its hero, service cards, onboarding process, FAQ and closing panel are CMS-managed.
+- **Existing subpages:** About, Data Entry, Virtual Assistant and NDA & Confidentiality are editable in the same page editor.
+- **New pages:** Create page, set a lowercase URL slug, edit SEO and sections, preview, then Save & publish.
+- The homepage and `/services/` are reserved built-in routes. They cannot be deleted or renamed. Their visibility can be switched off; the generator then hides their main content, adds `noindex,nofollow`, and excludes them from the sitemap.
+- Draft pages are not generated or listed in the sitemap. Deleting a CMS-managed page removes its generated route on the next build.
 
-## Create a GitHub token
+## Visual section builder
 
-1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.
-2. Resource owner: `opervyn`.
-3. Repository access: **Only select repositories** → `opervyn.github.io`.
-4. Repository permissions: **Contents: Read and write**. Add **Actions: Read-only** to let the CMS report the build/deployment outcome. Metadata remains read-only.
-5. Use an expiry date. Paste the token into the CMS and connect. Never send it to anyone or put it in a website file.
-6. Disconnect after editing; closing the CMS page also clears the in-memory token.
+Add and edit the 15 reusable section types: Hero, Text, About/Introduction, Text + Image, Service Cards, Feature, Gallery, Statistics, Testimonials, Process/Steps, FAQ, Contact, Team/Founders, Logos/Partners and Custom Content.
 
-## Editing and publishing
+Each section can be reordered by dragging its header, duplicated, deleted, collapsed and hidden/shown. Section-specific fields include images, alt text, captions, buttons and repeatable items. Repeatable cards, FAQs, testimonials, process steps, statistics, gallery entries, logos and team members support add, edit, delete, duplicate and reorder controls.
 
-- Use **Pages → Edit page** to manage page sections and SEO.
-- Use **Create page** for a new page; it starts as a draft. Change status to Published when ready.
-- The page preview is a local preview. **Save & publish** commits JSON and any uploaded assets to GitHub. The Actions workflow generates the pages and deploys them.
-- A published new page appears at `/pages/<slug>/` and is linked from CMS-managed page navigation.
-- Homepage text is managed under **Site settings**.
+For the homepage and services overview, existing section IDs map CMS content to the current public markup. New sections use the CMS section presentation and inherit ABLEHARBOR theme colors and responsive layout rules. Existing public sections retain their existing classes and design.
 
-## Validation status
+## Navigation and footer
 
-The page generator, JSON, and admin JavaScript are validated in this package. Deployment to the GitHub repository still requires the repository owner to upload/commit these files and allow the Actions workflow to run. The CMS reports the content commit separately from the Pages deployment when the token includes Actions: Read-only.
+- Navigation → Header navigation and Footer navigation.
+- Add, edit, delete and reorder links; configure dropdowns, submenu links, new-tab behavior and primary CTA styling.
+- A live text preview shows the current header and footer link structure before saving.
+- Footer headings, description, logo, copyright, lower notes, contact email and optional phone are editable under Site settings. Social and service links are managed through Footer navigation.
+- Anchor links are kept on the homepage when used from other pages.
 
+## Media library
 
-## November 2026 repair notes
+- Upload PNG, JPEG, WebP or GIF images. Supported browser image formats are resized to a maximum 2000px edge and converted to WebP when the optimized result is smaller.
+- Choose images from the library in section image fields, or enter an HTTPS URL / repository path.
+- Set alt text, copy paths, replace section images and rename CMS-managed uploads. Renaming updates references in the CMS JSON before removing the old asset.
+- Unused CMS-managed uploads can be deleted. Legacy assets are protected from rename/deletion because bespoke HTML may reference them directly.
+- Image paths are checked against the media library when its listing is available. External images must use HTTPS.
 
-- This package is configured for the GitHub user-site repository `opervyn/opervyn.github.io` and the root URL `https://opervyn.github.io/`.
-- The homepage has one valid HTML doctype, cache-busted stylesheet URLs, and loads `site.js` so CMS homepage settings are applied.
-- `.nojekyll` and `.github/workflows/pages.yml` are included. The workflow builds the CMS pages, validates critical root files and JSON, uploads the complete repository root as the Pages artifact, and deploys it.
-- Upload the extracted package contents to the repository root, replacing matching files and folders. Do not upload the ZIP itself or place everything inside an extra folder.
+## Save and publish
 
+1. Connect with the fine-grained token.
+2. Make changes and use Preview before publishing.
+3. Select Save & publish. The CMS validates the page and commits `content/pages.json` or `content/site.json` to `main`.
+4. GitHub Actions runs `scripts/build_pages.py`, assembles the Pages artifact and deploys it.
+5. If the token has Actions read access, the CMS checks the workflow run for the saved commit. A successful content commit is not reported as a successful deployment unless GitHub reports a successful run.
+6. If deployment status cannot be checked, open the repository's Actions tab and verify the latest Pages workflow manually.
 
-## Deployment repair included in this package
+Uploaded images are committed as repository assets. Each upload can trigger a build; the page content is not published until its JSON changes are saved.
 
-- The Pages workflow publishes the repository root (`.`), so `styles.css`, `theme-redesign.css`, `content/site.json`, assets, and `/admin/` are included in the same artifact as `index.html`.
-- The build script tracks only generated page files in `.cms-generated-files.json`; it no longer recursively deletes page folders or unrelated assets.
-- The sitemap is regenerated without duplicate routes, and custom pages cannot overwrite an unmanaged page at the same path.
-- The CMS uses consistent site-settings field IDs and can verify the Actions run for a content commit when its token has Actions read access.
+## SEO and canonical URLs
 
+The only canonical host is `https://ableharbor.github.io/`. The build updates canonical, Open Graph and Twitter metadata for the homepage and services overview, and generates canonical metadata for CMS-managed routes. `robots.txt` points to `https://ableharbor.github.io/sitemap.xml`. The sitemap is rebuilt from published, visible pages only.
 
-## November 2026 CMS and email update
+Legacy image filenames containing the former project name are retained where existing markup still references them. They are asset filenames only and are not canonical URLs or public brand references.
 
-- Contact links marked `data-cms-email` retain a `mailto:` fallback and use the visitor's native mail app on mobile. On desktop, clicks open Gmail's compose screen in a new tab with the configured contact address and any supported subject prefilled. This depends on JavaScript; the fallback remains a standard `mailto:` link.
-- The contact address is configured as `ableharbor.operation@gmail.com` in `content/site.json`.
-- Added a Navigation manager in `/admin` for adding, editing, deleting and reordering header and footer links, including new-tab and primary-CTA options. The shared `content/site.json` navigation config is used on the homepage and generated CMS pages.
-- Added a Homepage entry to the CMS Pages list; it opens the existing homepage Site settings editor. Homepage text currently exposed by the existing settings schema remains editable there.
-- Added Feature, FAQ and Steps section types to the reusable section editor; these use the site's existing shared CMS card/list styling.
+## Local validation
 
-**Scope note:** this update does not yet make every decorative element, illustration, badge, image, and every static content string on every legacy route independently editable. The homepage still has legacy static markup and its existing `Site settings` schema is not a complete visual page builder. The original CSS, fonts, layouts, route structure and GitHub Actions deployment flow are retained. A true zero-hardcoded-content migration would require a further page-by-page content-schema and template migration, with visual regression review before replacing each legacy section.
+Run from the repository root:
+
+```bash
+node --check admin/admin.js
+node --check site.js
+python -m py_compile scripts/build_pages.py
+python scripts/build_pages.py
+python -c "import json; json.load(open('content/site.json')); json.load(open('content/pages.json'))"
+```
+
+The build is deterministic and only removes previously generated routes plus the known CMS-managed route files. It does not recursively delete assets or unrelated content.
+
+## Platform limitations
+
+- GitHub Pages has no server-side CMS database, private admin authentication or secret storage. Repository content is public; protect the repository and token accordingly.
+- GitHub API writes and the final hosted deployment require a valid user-supplied token and a successful GitHub Actions run. They cannot be verified from a local build.
+- Existing legacy sections are hydrated in the browser from `content/pages.json`; the original HTML remains as the no-JavaScript fallback. SEO metadata and visibility state are also written into HTML during the build.
+- Legacy assets are protected from rename/deletion because the CMS cannot safely rewrite every hard-coded reference in the bespoke public HTML.

@@ -1,6 +1,351 @@
 {
   "pages": [
     {
+      "id": "services-overview",
+      "title": "Our Services",
+      "slug": "services",
+      "systemPage": true,
+      "layout": "services-overview",
+      "status": "published",
+      "visible": true,
+      "seo": {
+        "title": "Our Services | ABLEHARBOR",
+        "description": "Explore ABLEHARBOR remote data entry and virtual assistant support services.",
+        "image": "assets/ableharbor-logo.png"
+      },
+      "sections": [
+        {
+          "id": "services-hero",
+          "type": "hero",
+          "targetId": "services-hero",
+          "eyebrow": "ABLEHARBOR SERVICES",
+          "heading": "Remote support for the work that keeps your business moving.",
+          "body": "ABLEHARBOR is an independent, remote-first offshore operations support team based in Bangladesh. Our current service areas are Data Entry and Virtual Assistant support. Each project is assessed against the task requirements and available capacity.",
+          "visible": true
+        },
+        {
+          "id": "services-categories",
+          "type": "service-cards",
+          "targetId": "services-data-entry",
+          "eyebrow": "CHOOSE A SERVICE",
+          "heading": "How can ABLEHARBOR support your business?",
+          "body": "Choose the support your business needs.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Data Entry Services",
+              "body": "Accurate data capture, spreadsheet updates, document processing and structured information entry based on your instructions.",
+              "link": "/services/data-entry/"
+            },
+            {
+              "title": "Virtual Assistant Services",
+              "body": "Task-based remote assistance for administrative activities and routine business operations, shaped around your requirements.",
+              "link": "/services/virtual-assistant/"
+            }
+          ]
+        },
+        {
+          "id": "services-model",
+          "type": "process",
+          "targetId": "services-model",
+          "eyebrow": "A CLIENT-GUIDED WORKING MODEL",
+          "heading": "How service onboarding works",
+          "body": "A clear onboarding process keeps responsibilities, training and quality expectations aligned.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Explain the task and expectations",
+              "body": "You outline the responsibilities, expected output, working hours, tools and communication requirements."
+            },
+            {
+              "title": "Provide task-specific training",
+              "body": "You train the assigned agent on your specific process and provide instructions, examples, SOPs and authorized access."
+            },
+            {
+              "title": "Review practice work",
+              "body": "The agent completes sample tasks so you can review their understanding and confirm readiness."
+            },
+            {
+              "title": "Begin and monitor regular work",
+              "body": "Once approved, the agent follows the agreed workflow. ABLEHARBOR coordinates communication and progress."
+            }
+          ]
+        },
+        {
+          "id": "services-faq",
+          "type": "faq",
+          "targetId": "services-faq",
+          "eyebrow": "COMMON QUESTIONS",
+          "heading": "Frequently asked questions",
+          "body": "Useful details about our services and working arrangements.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Can I choose only one service?",
+              "body": "Yes. You can request Data Entry, Virtual Assistant support or a combination, depending on the tasks and agent capabilities required."
+            },
+            {
+              "title": "Who trains the assigned agent?",
+              "body": "The client provides task-specific training, instructions, examples and access to the required systems. The agent practices the workflow and the client reviews sample work."
+            },
+            {
+              "title": "Can I hire one agent or multiple agents?",
+              "body": "Both arrangements can be discussed. Team size depends on the workload, task complexity, schedule and agreed responsibilities."
+            },
+            {
+              "title": "How does ABLEHARBOR work remotely?",
+              "body": "Our team works remotely. We agree on communication, schedules, task instructions and delivery expectations with each client."
+            },
+            {
+              "title": "How many people are available?",
+              "body": "Approximately five people are in our available team pool, with one agent available for immediate assignment."
+            },
+            {
+              "title": "Can ABLEHARBOR sign an NDA?",
+              "body": "ABLEHARBOR is prepared to review a mutually agreed NDA before confidential information is shared, subject to authorized approval."
+            }
+          ]
+        },
+        {
+          "id": "services-team",
+          "type": "feature",
+          "targetId": "services-team",
+          "eyebrow": "LET’S DISCUSS YOUR WORKFLOW",
+          "heading": "Tell us what needs to get done.",
+          "body": "Share your tasks, expected workload and working requirements. We’ll review the scope and discuss a suitable remote support arrangement.",
+          "buttonText": "Contact ABLEHARBOR",
+          "buttonUrl": "/#contact",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "id": "homepage",
+      "title": "Homepage",
+      "slug": "home",
+      "systemPage": true,
+      "layout": "homepage",
+      "status": "published",
+      "visible": true,
+      "seo": {
+        "title": "ABLEHARBOR | Your Remote Operations Partner",
+        "description": "ABLEHARBOR provides remote data entry and virtual assistant support for businesses, with dedicated teams and coordinated delivery from Bangladesh.",
+        "image": "assets/ableharbor-logo.png"
+      },
+      "sections": [
+        {
+          "id": "home-hero",
+          "type": "hero",
+          "targetId": "home",
+          "eyebrow": "YOUR OFFSHORE OPERATIONS PARTNER",
+          "heading": "Your dedicated team. Built around your workflow.",
+          "body": "Reliable remote support for data entry and everyday business tasks.",
+          "visible": true,
+          "items": [],
+          "description": "ABLEHARBOR provides dedicated remote data-entry and virtual-assistant support from Bangladesh. We build a team around your requirements, while your business provides the instructions, tools and workflow. Our supervisor coordinates delivery and quality checks."
+        },
+        {
+          "id": "home-about",
+          "type": "about",
+          "targetId": "about",
+          "eyebrow": "01 / ABOUT ABLEHARBOR",
+          "heading": "A dedicated team. Operations made easier.",
+          "body": "ABLEHARBOR is a remote-first operations support company based in Sylhet, Bangladesh. We provide people, build dedicated teams and coordinate day-to-day delivery for clients who need dependable support with recurring data-entry and administrative tasks.",
+          "visible": true,
+          "items": [],
+          "detail": "Each assignment follows the client’s instructions, systems and agreed workflow. A dedicated agent or team handles the work, while an ABLEHARBOR supervisor monitors coordination, progress and quality."
+        },
+        {
+          "id": "home-services",
+          "type": "service-cards",
+          "targetId": "services",
+          "eyebrow": "02 / WHAT WE DO",
+          "heading": "Focused support for your daily operations.",
+          "body": "Choose the support your business needs. Each assignment is scoped around your tasks, instructions, workflow and expected outputs.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Data Entry Services",
+              "body": "Structured data capture, document processing and information organization completed according to your templates and instructions.",
+              "link": "/services/data-entry/",
+              "icon": "⌗",
+              "features": [
+                "Excel and Google Sheets data entry",
+                "PDF and image-to-spreadsheet conversion",
+                "Product information and description entry",
+                "Document processing and data organization"
+              ]
+            },
+            {
+              "title": "Virtual Assistant Services",
+              "body": "Task-based remote assistance for administrative work and routine business activities, based on your requirements.",
+              "link": "/services/virtual-assistant/",
+              "icon": "✎",
+              "features": [
+                "Administrative and inbox support",
+                "Internet research and data collection",
+                "Document and record management",
+                "Routine operational assistance"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "home-process",
+          "type": "process",
+          "targetId": "process",
+          "eyebrow": "03 / HOW WE WORK",
+          "heading": "A guided start. A clear working process.",
+          "body": "Every client has a different workflow. We agree on the requirements first, then follow client-guided training and approval before regular work begins.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Discuss requirements",
+              "body": "You explain the tasks, expected outputs, schedule, tools and responsibilities."
+            },
+            {
+              "title": "Client-guided training",
+              "body": "You provide task-specific instructions, examples, SOPs and authorized system access."
+            },
+            {
+              "title": "Practice & review",
+              "body": "The assigned agent practices the workflow. You review sample work and confirm readiness."
+            },
+            {
+              "title": "Begin operations",
+              "body": "Regular work starts after the workflow and expectations are understood and approved."
+            },
+            {
+              "title": "Monitor & support",
+              "body": "ABLEHARBOR coordinates communication and progress and carries out agreed checks during delivery."
+            }
+          ]
+        },
+        {
+          "id": "home-directory",
+          "type": "service-cards",
+          "targetId": "seo-directory",
+          "eyebrow": "SERVICE DETAILS",
+          "heading": "Explore our two services.",
+          "body": "Visit each service page for detailed task examples, onboarding information and frequently asked questions.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Data Entry Services",
+              "body": "Spreadsheet entry, PDF and image conversion, document processing and structured product information.",
+              "link": "/services/data-entry/"
+            },
+            {
+              "title": "Virtual Assistant Services",
+              "body": "Administrative support, research, document handling and routine business assistance.",
+              "link": "/services/virtual-assistant/"
+            }
+          ]
+        },
+        {
+          "id": "home-team",
+          "type": "feature",
+          "targetId": "team",
+          "eyebrow": "05 / A REMOTE-FIRST TEAM",
+          "heading": "Good work can happen from anywhere.",
+          "body": "We believe today's work should be flexible. ABLEHARBOR operates remotely, giving team members the freedom to work from a comfortable, familiar environment. A fresh mind, clear instructions and a dependable process matter more than a shared office. Our initial target markets are the USA, UK, Canada and Australia.",
+          "visible": true,
+          "items": []
+        },
+        {
+          "id": "home-founders",
+          "type": "team",
+          "targetId": "founding-member",
+          "eyebrow": "06 / THE PEOPLE BEHIND ABLEHARBOR",
+          "heading": "Built by people. Driven by purpose.",
+          "body": "Meet the founding members helping shape ABLEHARBOR’s direction, values and approach to dependable offshore operations support.",
+          "visible": true,
+          "members": [
+            {
+              "name": "Fazle Rabbi",
+              "role": "Founding Member",
+              "bio": "Part of the founding team helping shape ABLEHARBOR’s approach to flexible, thoughtful operations support.",
+              "image": "assets/fazle-rabbi-founding-member.jpg",
+              "alt": "Fazle Rabbi, founding member of ABLEHARBOR"
+            },
+            {
+              "name": "Sobrul Karim",
+              "role": "Founding Member",
+              "bio": "Part of the founding team helping shape ABLEHARBOR’s approach to dependable remote operations support.",
+              "image": "assets/sobrul-karim-founding-member.jpg",
+              "alt": "Sobrul Karim, founding member of ABLEHARBOR"
+            },
+            {
+              "name": "Rudro Singh",
+              "role": "Founding Member",
+              "bio": "Part of the founding team helping shape ABLEHARBOR’s approach to dependable remote operations support.",
+              "image": "assets/rudro-singh-founding-member.jpg",
+              "alt": "Rudro Singh, founding member of ABLEHARBOR"
+            }
+          ]
+        },
+        {
+          "id": "home-faq",
+          "type": "faq",
+          "targetId": "faq",
+          "eyebrow": "FREQUENTLY ASKED QUESTIONS",
+          "heading": "Common questions. Clear answers.",
+          "body": "A few useful details about working with ABLEHARBOR.",
+          "visible": true,
+          "items": [
+            {
+              "title": "Who does ABLEHARBOR work with?",
+              "body": "ABLEHARBOR supports businesses and organizations that need remote data entry or task-based virtual assistant support."
+            },
+            {
+              "title": "What services do you provide?",
+              "body": "Our current service areas are Data Entry and Virtual Assistant support. Each project is assessed against the client’s requirements and available capacity."
+            },
+            {
+              "title": "Can you support recurring projects?",
+              "body": "Yes. We can discuss recurring and ongoing workflows, with dedicated agents assigned according to the agreed scope and workload."
+            },
+            {
+              "title": "How is project capacity determined?",
+              "body": "Around five people are in our available team pool, and one agent is available for immediate assignment. Additional recruitment can be discussed if the project requires more people, but it proceeds only after the client confirms."
+            },
+            {
+              "title": "How do you handle quality?",
+              "body": "ABLEHARBOR coordinates communication and progress, while agreed quality checks follow the client’s instructions and acceptance requirements."
+            },
+            {
+              "title": "Who provides task-specific training?",
+              "body": "The client provides the training, instructions, examples, SOPs and authorized access needed for its specific workflow."
+            },
+            {
+              "title": "Can ABLEHARBOR sign an NDA?",
+              "body": "ABLEHARBOR is prepared to review and sign a mutually agreed Non-Disclosure Agreement before confidential project information is shared, subject to review and authorized approval."
+            },
+            {
+              "title": "How can I request a quote?",
+              "body": "Email ABLEHARBOR with your service requirements, expected workload and preferred team arrangement."
+            },
+            {
+              "title": "Can you provide more than one dedicated agent?",
+              "body": "Yes, subject to availability and project scope. Additional capacity can be discussed and confirmed before proceeding."
+            }
+          ]
+        },
+        {
+          "id": "home-contact",
+          "type": "contact",
+          "targetId": "contact",
+          "eyebrow": "START A CONVERSATION",
+          "heading": "Tell us what support you need.",
+          "body": "Email us with your task requirements, expected workload, preferred schedule and any tools or systems involved. We will review the scope and discuss the right team arrangement.",
+          "buttonText": "Email ABLEHARBOR",
+          "buttonUrl": "mailto:ableharbor.operation@gmail.com",
+          "visible": true,
+          "items": []
+        }
+      ]
+    },
+    {
       "id": "about",
       "title": "About ABLEHARBOR",
       "slug": "about",

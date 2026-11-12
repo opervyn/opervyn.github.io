@@ -94,5 +94,20 @@
         "newTab": false
       }
     ]
+  },
+  "footer": {
+    "description": "ABLEHARBOR — Your Offshore Operations Partner.",
+    "copyright": "© ABLEHARBOR. All rights reserved.",
+    "bottomNote": "Remote-first operations support from Bangladesh",
+    "serviceNote": "Data Entry · Virtual Assistant",
+    "logo": "assets/ableharbor-logo.png",
+    "socialLinks": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/company/ableharbor",
+        "newTab": true
+      }
+    ],
+    "heading": ""
   }
 }

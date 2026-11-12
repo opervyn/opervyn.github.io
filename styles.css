@@ -369,3 +369,5 @@ h2 span{color:#008F83}
 .founder-bio{font-size:13px;line-height:1.8;color:#64748b;margin:0}
 @media(max-width:900px){.founder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.founder-profile:last-child{grid-column:1/-1;max-width:calc(50% - 10px)}}
 @media(max-width:600px){.founder-grid{grid-template-columns:1fr}.founder-profile:last-child{grid-column:auto;max-width:none}.founder-profile .founder-photo-wrap{height:390px}.founder-profile .founder-copy{padding:24px}}
+
+.cms-nav-dropdown{position:relative;display:inline-block}.cms-nav-dropdown summary{list-style:none;cursor:pointer}.cms-nav-dropdown summary::-webkit-details-marker{display:none}.cms-nav-submenu{display:grid;min-width:190px;gap:4px;padding:10px;background:#fff;border:1px solid #e4eaf2;border-radius:9px;box-shadow:0 12px 30px #0b1f4418;z-index:30}.cms-nav-submenu a{display:block;padding:8px 10px;text-decoration:none}.site-header .cms-nav-dropdown[open] .cms-nav-submenu{position:absolute;top:100%;left:0}.seo-footer-links .cms-nav-dropdown{display:inline-block}

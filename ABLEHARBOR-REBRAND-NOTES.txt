@@ -1,19 +1,7 @@
-ABLEHARBOR website rebrand
-==========================
+ABLEHARBOR rebrand and hosting notes
 
-Brand: ABLEHARBOR
-Descriptor: OPERATIONS
-Contact: ABLEHARBOR.BUSINESS@GMAIL.COM
-Primary logo: assets/ableharbor-logo.png
-Favicon/icon: assets/ableharbor-icon.png
+Canonical public site: https://ableharbor.github.io/
+GitHub repository: ableharbor/ableharbor.github.io
+Publishing branch: main
 
-The existing GitHub Pages hostname (opervyn.github.io) is intentionally retained
-because it is the current hosting address. It should only be changed after a
-new custom domain is purchased, configured and verified.
-
-The CMS repository target has been updated to:
-mohammadsabbir-hub/mohammadsabbir-hub.github.io
-
-Before publishing, verify that the GitHub fine-grained token used by the CMS
-has Contents read/write access to that repository. Existing site content,
-routes, service pages and CMS structure have been retained.
+Legacy asset filenames containing the old project name are retained where referenced to avoid breaking existing image paths. They are asset filenames only, not canonical URLs or brand identity.
