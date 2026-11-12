@@ -66,3 +66,14 @@ The page generator, JSON, and admin JavaScript are validated in this package. De
 - The build script tracks only generated page files in `.cms-generated-files.json`; it no longer recursively deletes page folders or unrelated assets.
 - The sitemap is regenerated without duplicate routes, and custom pages cannot overwrite an unmanaged page at the same path.
 - The CMS uses consistent site-settings field IDs and can verify the Actions run for a content commit when its token has Actions read access.
+
+
+## November 2026 CMS and email update
+
+- Contact links marked `data-cms-email` retain a `mailto:` fallback and use the visitor's native mail app on mobile. On desktop, clicks open Gmail's compose screen in a new tab with the configured contact address and any supported subject prefilled. This depends on JavaScript; the fallback remains a standard `mailto:` link.
+- The contact address is configured as `ableharbor.operation@gmail.com` in `content/site.json`.
+- Added a Navigation manager in `/admin` for adding, editing, deleting and reordering header and footer links, including new-tab and primary-CTA options. The shared `content/site.json` navigation config is used on the homepage and generated CMS pages.
+- Added a Homepage entry to the CMS Pages list; it opens the existing homepage Site settings editor. Homepage text currently exposed by the existing settings schema remains editable there.
+- Added Feature, FAQ and Steps section types to the reusable section editor; these use the site's existing shared CMS card/list styling.
+
+**Scope note:** this update does not yet make every decorative element, illustration, badge, image, and every static content string on every legacy route independently editable. The homepage still has legacy static markup and its existing `Site settings` schema is not a complete visual page builder. The original CSS, fonts, layouts, route structure and GitHub Actions deployment flow are retained. A true zero-hardcoded-content migration would require a further page-by-page content-schema and template migration, with visual regression review before replacing each legacy section.

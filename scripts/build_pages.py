@@ -111,7 +111,7 @@ def render_section(section: dict, base: str) -> str:
             f'<p>{esc(section.get("caption"))}</p></section>'
         )
 
-    if section_type in {"list", "cards"}:
+    if section_type in {"list", "cards", "feature", "faq", "steps"}:
         items = "".join(
             '<article class="cms-item">'
             f'<h3>{esc(item.get("title"))}</h3><p>{esc(item.get("body"))}</p></article>'
@@ -223,7 +223,7 @@ def render_page(page: dict, route: str, all_pages: list[dict]) -> str:
     </button>
     <nav class="nav">
       <a href="{base}">Home</a><a href="{base}services/">Our Services</a>{nav_links}
-      <a href="mailto:ABLEHARBOR.BUSINESS@GMAIL.COM">Contact</a>
+      <a data-cms-email="true" href="mailto:ableharbor.operation@gmail.com">Contact</a>
     </nav>
   </header>
   <main class="cms-page">
@@ -247,10 +247,11 @@ def render_page(page: dict, route: str, all_pages: list[dict]) -> str:
       <span>Remote-first operations support from Bangladesh</span>
       <span>© ABLEHARBOR. All rights reserved.</span>
       <span>Data Entry · Virtual Assistant</span>
-      <span><a href="mailto:ABLEHARBOR.BUSINESS@GMAIL.COM">Email ↗</a></span>
+      <span><a data-cms-email="true" href="mailto:ableharbor.operation@gmail.com">Email ↗</a></span>
     </div>
   </footer>
   <script src="{base}script.js"></script>
+  <script defer src="{base}site.js"></script>
 </body>
 </html>
 """

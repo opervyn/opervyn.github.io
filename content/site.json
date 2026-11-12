@@ -14,8 +14,85 @@
   "processTitle": "Your workflow. Our dedicated support.",
   "contactTitle": "Tell us what support you need.",
   "contactDescription": "Email us with your task requirements, expected workload, preferred schedule and any tools or systems involved. We will review the scope and discuss the right team arrangement.",
-  "contactEmail": "ABLEHARBOR.BUSINESS@GMAIL.COM",
+  "contactEmail": "ableharbor.operation@gmail.com",
   "seoTitle": "ABLEHARBOR | Remote Business Support & Operations",
   "seoDescription": "ABLEHARBOR provides dependable remote business support and operational services, including data entry, e-commerce support and virtual assistance.",
-  "seoKeywords": "remote data entry services, virtual assistant services, offshore data entry team, spreadsheet data entry, PDF to Excel, image to spreadsheet"
+  "seoKeywords": "remote data entry services, virtual assistant services, offshore data entry team, spreadsheet data entry, PDF to Excel, image to spreadsheet",
+  "navigation": {
+    "header": [
+      {
+        "label": "Our Services",
+        "url": "/services/",
+        "newTab": false
+      },
+      {
+        "label": "About",
+        "url": "/about/",
+        "newTab": false
+      },
+      {
+        "label": "How We Work",
+        "url": "#process",
+        "newTab": false
+      },
+      {
+        "label": "Capabilities",
+        "url": "#services",
+        "newTab": false
+      },
+      {
+        "label": "FAQ",
+        "url": "#faq",
+        "newTab": false
+      },
+      {
+        "label": "NDA & Confidentiality",
+        "url": "/nda-confidentiality/",
+        "newTab": false
+      },
+      {
+        "label": "Discuss a project",
+        "url": "#contact",
+        "newTab": false,
+        "cta": true
+      }
+    ],
+    "footer": [
+      {
+        "label": "About ABLEHARBOR",
+        "url": "/about/",
+        "newTab": false
+      },
+      {
+        "label": "Our Services",
+        "url": "/services/",
+        "newTab": false
+      },
+      {
+        "label": "Data Entry",
+        "url": "/services/data-entry/",
+        "newTab": false
+      },
+      {
+        "label": "Virtual Assistant",
+        "url": "/services/virtual-assistant/",
+        "newTab": false
+      },
+      {
+        "label": "NDA & Confidentiality",
+        "url": "/nda-confidentiality/",
+        "newTab": false
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/company/opervyn/",
+        "newTab": true
+      },
+      {
+        "label": "Email",
+        "url": "mailto:ableharbor.operation@gmail.com",
+        "newTab": false
+      }
+    ]
+  }
 }
