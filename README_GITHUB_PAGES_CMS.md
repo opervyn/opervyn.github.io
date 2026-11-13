@@ -95,3 +95,16 @@ The build is deterministic and only removes previously generated routes plus the
 - GitHub API writes and the final hosted deployment require a valid user-supplied token and a successful GitHub Actions run. They cannot be verified from a local build.
 - Existing legacy sections are hydrated in the browser from `content/pages.json`; the original HTML remains as the no-JavaScript fallback. SEO metadata and visibility state are also written into HTML during the build.
 - Legacy assets are protected from rename/deletion because the CMS cannot safely rewrite every hard-coded reference in the bespoke public HTML.
+
+## Promotional offer popup
+
+The global promotional popup is managed from **CMS → Offer popup**. It is configured in `content/site.json` under `promoPopup` and is rendered on public pages by `site.js` using the ABLEHARBOR navy/teal design system in `theme-redesign.css`.
+
+- The default offer is enabled and appears after a four-second delay.
+- The default cooldown is 60 minutes per browser/device, shared across pages on the same origin.
+- Popup title, price headline, introduction, process steps, benefits, closing copy, CTA label and CTA destination are editable in the CMS.
+- Entrance animation and CTA engagement effect can be changed without editing source code.
+- The CMS preview displays the current unsaved offer before publishing.
+- The popup uses the browser's native modal dialog behavior, supports Escape/backdrop dismissal, and respects reduced-motion preferences.
+
+To disable the offer, open **CMS → Offer popup**, turn off **Enable promotional popup**, and select **Save & publish offer**.

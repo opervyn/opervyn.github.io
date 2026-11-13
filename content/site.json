@@ -109,5 +109,34 @@
       }
     ],
     "heading": ""
+  },
+  "promoPopup": {
+    "enabled": true,
+    "delaySeconds": 4,
+    "frequencyMinutes": 60,
+    "animation": "fade-scale",
+    "title": "NEED A DEDICATED DATA ENTRY AGENT?",
+    "headline": "JUST $3.99/HOUR!",
+    "intro": "Why spend more on local hiring when you can get dedicated offshore data entry support at an affordable hourly rate? ABLEHARBOR provides dedicated data entry agents who learn YOUR working process and follow YOUR instructions.",
+    "stepsTitle": "How It Works",
+    "steps": [
+      "Tell us what work you need done.",
+      "Provide initial training and instructions.",
+      "We assign a dedicated agent.",
+      "Your agent follows your workflow and handles the assigned tasks."
+    ],
+    "benefitsTitle": "WHY ABLEHARBOR?",
+    "benefits": [
+      "Dedicated human data entry agents",
+      "Just $3.99 per hour",
+      "Client-specific training",
+      "Flexible data entry requirements",
+      "Affordable offshore staffing",
+      "Focus on accuracy and consistency"
+    ],
+    "closing": "You don't need to change your workflow. We adapt our assigned agent to your requirements.\n\nLooking for reliable data entry support?\n\nStarting at ONLY $3.99/hour!",
+    "ctaText": "Contact ABLEHARBOR Today",
+    "ctaUrl": "mailto:ableharbor.operation@gmail.com?subject=Dedicated%20Data%20Entry%20Support%20Inquiry",
+    "ctaEffect": "shine"
   }
 }

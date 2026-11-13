@@ -78,6 +78,92 @@
     });
   }
 
+  function safePopupUrl(value) {
+    const url = String(value || '').trim();
+    return /^(https:\/\/|mailto:|tel:|\/|#)/i.test(url) && !url.startsWith('//') ? url : '#';
+  }
+
+  function renderOfferPopup(config, contactEmail) {
+    if (!config || config.enabled === false || new URLSearchParams(location.search).has('popupPreview')) return;
+    const cooldownKey = 'ableharbor_offer_last_shown_v1';
+    const frequency = Math.max(1, Math.min(10080, Number(config.frequencyMinutes) || 60)) * 60 * 1000;
+    const delay = Math.max(0, Math.min(60, Number(config.delaySeconds) || 0)) * 1000;
+    try {
+      const lastShown = Number(localStorage.getItem(cooldownKey) || 0);
+      if (lastShown && Date.now() - lastShown < frequency) return;
+    } catch (error) {
+      // Storage may be unavailable in privacy modes; this visit can still receive the offer.
+    }
+
+    const create = (tag, className, text) => {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    };
+    const dialog = create('dialog', `ah-offer-dialog ah-offer-${config.animation || 'fade-scale'}`);
+    dialog.setAttribute('aria-labelledby', 'ah-offer-title');
+    dialog.setAttribute('aria-describedby', 'ah-offer-intro');
+    const shell = create('div', 'ah-offer-shell');
+    const header = create('header', 'ah-offer-top');
+    header.append(create('span', 'ah-offer-kicker', 'SPECIAL OFFER · ABLEHARBOR'));
+    const title = create('h2', 'ah-offer-title', config.title || 'NEED A DEDICATED DATA ENTRY AGENT?');
+    title.id = 'ah-offer-title';
+    const headline = create('p', 'ah-offer-headline', config.headline || 'JUST $3.99/HOUR!');
+    const close = create('button', 'ah-offer-close', '×');
+    close.type = 'button'; close.setAttribute('aria-label', 'Close offer');
+    header.append(title, headline, close);
+
+    const content = create('div', 'ah-offer-content');
+    const intro = create('p', 'ah-offer-intro', config.intro || ''); intro.id = 'ah-offer-intro';
+    content.append(intro);
+    if (Array.isArray(config.steps) && config.steps.length) {
+      content.append(create('h3', 'ah-offer-section-title', config.stepsTitle || 'How It Works'));
+      const list = create('ol', 'ah-offer-steps');
+      config.steps.forEach(item => { if (String(item).trim()) list.append(create('li', '', item)); });
+      content.append(list);
+    }
+    if (Array.isArray(config.benefits) && config.benefits.length) {
+      content.append(create('h3', 'ah-offer-section-title', config.benefitsTitle || 'WHY ABLEHARBOR?'));
+      const list = create('ul', 'ah-offer-benefits');
+      config.benefits.forEach(item => { if (String(item).trim()) list.append(create('li', '', item)); });
+      content.append(list);
+    }
+    if (config.closing) {
+      const closing = create('div', 'ah-offer-closing');
+      String(config.closing).split(/\n\s*\n/).forEach(paragraph => {
+        if (paragraph.trim()) closing.append(create('p', '', paragraph.trim()));
+      });
+      content.append(closing);
+    }
+    const tagline = create('p', 'ah-offer-tagline', 'You Train. We Execute.');
+    const cta = create('a', `ah-offer-cta ah-cta-${config.ctaEffect || 'shine'}`, config.ctaText || 'Contact ABLEHARBOR Today');
+    cta.href = safePopupUrl(config.ctaUrl || `mailto:${contactEmail || 'ableharbor.operation@gmail.com'}?subject=Dedicated%20Data%20Entry%20Support%20Inquiry`);
+    cta.append(create('span', 'ah-offer-cta-arrow', '↗'));
+    if (cta.href.toLowerCase().startsWith('mailto:')) cta.dataset.cmsEmail = 'true';
+    if (/^https:\/\//i.test(cta.href)) { cta.target = '_blank'; cta.rel = 'noopener noreferrer'; }
+    content.append(tagline, cta);
+    shell.append(header, content); dialog.append(shell); document.body.append(dialog);
+
+    let closeTimer = 0;
+    const dismiss = () => {
+      if (!dialog.open) return;
+      dialog.classList.add('ah-offer-closing');
+      closeTimer = window.setTimeout(() => { dialog.close(); dialog.remove(); }, 180);
+    };
+    close.addEventListener('click', dismiss);
+    dialog.addEventListener('click', event => { if (event.target === dialog) dismiss(); });
+    dialog.addEventListener('cancel', event => { event.preventDefault(); dismiss(); });
+    dialog.addEventListener('close', () => { window.clearTimeout(closeTimer); document.body.classList.remove('ah-offer-open'); });
+    window.setTimeout(() => {
+      if (!dialog.isConnected) return;
+      try { localStorage.setItem(cooldownKey, String(Date.now())); } catch (error) {}
+      document.body.classList.add('ah-offer-open');
+      dialog.showModal();
+      const focusable = dialog.querySelector('.ah-offer-close'); if (focusable) focusable.focus();
+    }, delay);
+  }
+
   fetch(contentUrl, { cache: 'no-store' })
     .then(response => { if (!response.ok) throw new Error(`Site settings unavailable (${response.status})`); return response.json(); })
     .then(data => {
@@ -92,6 +178,7 @@
         renderLinks(document.querySelector('.seo-footer-links'), data.navigation.footer);
       }
       if (data.contactEmail) setupEmailLinks(data.contactEmail);
+      renderOfferPopup(data.promoPopup, data.contactEmail);
       if (data.mediaAlt) document.querySelectorAll('img').forEach(img=>{try{const path=new URL(img.src,location.href).pathname.replace(/^\//,'');if(typeof data.mediaAlt[path]==='string'&&data.mediaAlt[path].trim())img.alt=data.mediaAlt[path].trim();}catch{}});
       if (data.footer) {
         const footer = data.footer;
