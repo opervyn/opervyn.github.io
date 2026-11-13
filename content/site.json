@@ -114,7 +114,7 @@
     "enabled": true,
     "delaySeconds": 4,
     "frequencyMinutes": 1,
-    "animation": "fade-scale",
+    "animation": "slide-up",
     "title": "NEED A DEDICATED DATA ENTRY AGENT?",
     "headline": "JUST $3.99/HOUR!",
     "intro": "Why spend more on local hiring when you can get dedicated offshore data entry support at an affordable hourly rate? ABLEHARBOR provides dedicated data entry agents who learn YOUR working process and follow YOUR instructions.",
@@ -136,7 +136,7 @@
     ],
     "closing": "You don't need to change your workflow. We adapt our assigned agent to your requirements.\n\nLooking for reliable data entry support?\n\nStarting at ONLY $3.99/hour!",
     "ctaText": "Contact ABLEHARBOR Today",
-    "ctaUrl": "https://mail.google.com/mail/?view=cm&to=ableharbor.operation%40gmail.com&su=ABLEHARBOR+Project+Inquiry",
+    "ctaUrl": "https://ableharbor.github.io/#contact",
     "ctaEffect": "shine"
   }
 }
