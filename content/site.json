@@ -113,7 +113,7 @@
   "promoPopup": {
     "enabled": true,
     "delaySeconds": 4,
-    "frequencyMinutes": 60,
+    "frequencyMinutes": 5,
     "animation": "fade-scale",
     "title": "NEED A DEDICATED DATA ENTRY AGENT?",
     "headline": "JUST $3.99/HOUR!",
