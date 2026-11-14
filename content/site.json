@@ -112,7 +112,7 @@
   },
   "promoPopup": {
     "enabled": true,
-    "delaySeconds": 4,
+    "delaySeconds": 1,
     "frequencyMinutes": 1,
     "animation": "slide-up",
     "title": "NEED A DEDICATED DATA ENTRY AGENT?",
